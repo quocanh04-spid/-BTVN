@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Thực hành HTML + CSS</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+<h1>Trang thực hành CSS</h1>
+<p class="lead">Thay đổi các giá trị trong <code>styles.css</code> để thấy hiệu ứng.</p>
+</header>
+
+
+<main class="container">
+<section class="card">
+<h2>Thẻ tiêu đề</h2>
+<p>Đây là một đoạn văn mẫu để thử các thuộc tính như màu, padding, margin, font-size, border-radius.</p>
+<button class="btn">Nút mẫu</button>
+</section>
+
+
+<section class="card">
+<h2>Hộp thông tin</h2>
+<div class="info-box">Thông tin ngắn</div>
+<label for="sizeRange">Thay đổi kích thước chữ:</label>
+<input id="sizeRange" type="range" min="12" max="36" value="16" />
+</section>
+</main>
+
+
+<footer class="site-footer">
+<p>© 2025 - Thực hành HTML & CSS</p>
+</footer>
+
+
+<script>
+// Tương tác nhỏ: điều chỉnh font-size bằng input range (không bắt buộc để thực hành chỉnh file CSS)
+const range = document.getElementById('sizeRange');
+range.addEventListener('input', (e) => {
+document.documentElement.style.setProperty('--base-font-size', e.target.value + 'px');
+});
+</script>
+</body>
+</html>
